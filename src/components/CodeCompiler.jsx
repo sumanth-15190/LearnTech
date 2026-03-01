@@ -72,7 +72,7 @@ function CodeCompiler({ language = 'html' }) {
                     version = "3.10.0";
                 }
 
-                const response = await fetch("/api/compile", {
+                const response = await fetch("https://learntech-backend-30xu.onrender.com/api/compile", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

@@ -35,9 +35,8 @@ function SignIn() {
 
     setLoading(true);
 
-    // call server login
     try {
-      const res = await fetch("/api/login", {
+      const res = await fetch("https://learntech-backend-30xu.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email.trim(), password }),
@@ -52,11 +51,11 @@ function SignIn() {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("user", JSON.stringify({ email: data.email, username: data.username }));
       localStorage.removeItem("lastRegistered");
-      
+
       // Clear form on success
       setEmail("");
       setPassword("");
-      
+
       navigate("/", { replace: true });
     } catch (err) {
       setError("Server error during login");
@@ -71,11 +70,11 @@ function SignIn() {
         <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: "28px", fontWeight: "bold" }}>Login</h2>
 
         {error && (
-          <div style={{ 
-            backgroundColor: "#ffe6e6", 
-            color: "#c00", 
-            padding: "12px", 
-            borderRadius: "6px", 
+          <div style={{
+            backgroundColor: "#ffe6e6",
+            color: "#c00",
+            padding: "12px",
+            borderRadius: "6px",
             marginBottom: "20px",
             border: "1px solid #ffcccc",
             fontSize: "14px"
@@ -85,10 +84,10 @@ function SignIn() {
         )}
 
         {lastRegistered && (
-          <div style={{ 
-            background: "#e6ffed", 
-            padding: "15px", 
-            borderRadius: "6px", 
+          <div style={{
+            background: "#e6ffed",
+            padding: "15px",
+            borderRadius: "6px",
             marginBottom: "20px",
             border: "1px solid #99ffcc",
             fontSize: "14px"
@@ -176,8 +175,8 @@ function SignIn() {
           <small style={{ display: "block", marginTop: "6px", color: "#666", fontSize: "12px" }}>Use a strong password with uppercase, lowercase, numbers, and symbols</small>
         </div>
 
-        <button 
-          className="primary-btn" 
+        <button
+          className="primary-btn"
           type="submit"
           disabled={loading}
           style={{

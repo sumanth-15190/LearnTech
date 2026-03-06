@@ -46,12 +46,14 @@ function Courses() {
                 justifyContent: "center",
                 alignItems: "center"
               }}>
-                <img src={course.img} alt={course.name} style={{
+                <img src={course.img} alt={course.name} className="course-img" style={{
                   maxWidth: ["dsa", "java", "javascript"].includes(course.id) ? "240px" : "200px",
                   maxHeight: ["dsa", "java", "javascript"].includes(course.id) ? "240px" : "200px",
                   objectFit: "contain",
                   opacity: 1,
-                  transition: "opacity 0.3s ease"
+                  transition: "opacity 0.3s ease",
+                  width: "100%",
+                  height: "auto"
                 }} />
               </div>
               <div className="course-name" style={{

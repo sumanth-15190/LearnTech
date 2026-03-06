@@ -127,7 +127,7 @@ function LessonDetail() {
                                     // Check for markdown bold and code
                                     const processedParts = cell.split(/(\*\*[^*]+\*\*|`[^`]+`|<[^>]+>)/g);
                                     return (
-                                      <td key={cIndex}>
+                                      <td key={cIndex} data-label={headers[cIndex]}>
                                         {processedParts.map((segment, sIndex) => {
                                           if (segment.match(/^\*\*[^*]+\*\*$/)) {
                                             return <strong key={sIndex}>{segment.slice(2, -2)}</strong>;

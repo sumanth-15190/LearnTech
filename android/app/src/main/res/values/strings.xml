@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">learntech</string>
+    <string name="title_activity_main">learntech</string>
+    <string name="package_name">com.yourdomain.learntech</string>
+    <string name="custom_url_scheme">com.yourdomain.learntech</string>
+</resources>

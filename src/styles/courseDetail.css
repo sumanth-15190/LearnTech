@@ -580,3 +580,127 @@ body.dark .lesson-list-item:hover {
     font-size: 20px;
     margin-bottom: 20px;
 }
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 768px) {
+    .course-detail-container {
+        padding: 90px 20px 40px;
+    }
+
+    .course-header-card {
+        padding: 25px 20px;
+    }
+
+    .course-header-card h1 {
+        font-size: 30px;
+    }
+
+    .course-description {
+        font-size: 16px;
+    }
+
+    .course-lessons-heading {
+        font-size: 24px;
+    }
+
+    .lesson-list-item {
+        padding: 12px 16px;
+    }
+
+    .lesson-item-left {
+        gap: 15px;
+    }
+
+    .lesson-number-circle {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .lesson-item-title {
+        font-size: 16px;
+    }
+
+    .lesson-content-card {
+        padding: 20px 20px;
+    }
+
+    .lesson-content-header h1 {
+        font-size: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .lesson-text-content {
+        font-size: 16px;
+    }
+
+    .lesson-subheading {
+        font-size: 20px;
+    }
+
+    .lesson-subheading-alt {
+        font-size: 22px;
+    }
+
+    .lesson-table-container {
+        padding: 5px;
+        background-color: transparent;
+        border-left: none;
+    }
+
+    .lesson-table,
+    .lesson-table tbody,
+    .lesson-table tr,
+    .lesson-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .lesson-table thead {
+        display: none;
+    }
+
+    .lesson-table tr {
+        margin-bottom: 20px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background-color: #252526;
+        padding: 10px;
+    }
+
+    .lesson-table td {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px 0;
+        font-size: 15px;
+        border-bottom: 1px solid #333;
+    }
+
+    .lesson-table td:last-child {
+        border-bottom: none;
+    }
+
+    .lesson-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #04aa6d;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .lesson-progress-card {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-btn-content {
+        font-size: 13px;
+    }
+}
